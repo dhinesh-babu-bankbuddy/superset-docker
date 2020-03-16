@@ -1,0 +1,14 @@
+version: '3'
+services:
+
+  superset:
+    image: superset_oauth:latest
+    ports: 
+      - 8088:8088
+    # Changing ownership and permission of the mounted volumes and running HTTPD
+    volumes:
+      - ./configuration:/etc/superset
+    environment: 
+      - CONSUMER_KEY=Z6O3cDE22ANqYLu5eWZpqtBYvt6a9CjnpwpdmGn9
+      - CONSUMER_SECRET=iwLqztZJJLKnpo4yFnWJMdVzfV9eHUthnrVzmZBwtKTKWYnw6J4eGLTzTV5kJh6V1S02xq7CDGeUHt68RUqT3USSHX8O0I2R2Bn2FDcpEPSr38RgM4JYCd4IrN7Pq8EV
+      - BASE_URL=kitchen-sink.bankbuddy.me
